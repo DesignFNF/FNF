@@ -241,6 +241,11 @@ a:hover {
     animation: jump 0.5s ease-in-out;
 }
 
+@media screen and (min-width: 2000px) {
+    .logo-container {
+        bottom: 15vh; /* Sube el logo un poco más en pantallas ultra grandes */
+    }
+}
 
 /* Media queries para ajustar tamaño */
 @media screen and (max-width: 900px) {
