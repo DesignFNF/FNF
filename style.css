@@ -243,7 +243,12 @@ a:hover {
 
 @media screen and (min-width: 2000px) {
     .logo-container {
-        bottom: 5vh; /* Sube el logo un poco más en pantallas ultra grandes */
+        bottom: 2vh; /* Sube el logo un poco más en pantallas ultra grandes */    
+    }
+
+     .logo {
+        width: 100vw;  /* El logo ocupará un 50% del ancho en pantallas pequeñas */
+        max-width: 250px; /* Tamaño máximo en pantallas pequeñas */
     }
 }
 
