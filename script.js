@@ -8,7 +8,7 @@ document.querySelector('.logo').addEventListener('click', function() {
         logoContainer.classList.remove('moved');
         textoInfo.classList.remove('opaque');
 
-        textoInfo.innerHTML = 'Friends & Family, fundada en CDMX por Lucho Martinez, es una productora y <i>media company</i> que fusiona gastronomía, cultura y creatividad. Actúa como un paraguas creativo para proyectos diversos, desde cocina innovadora hasta producción de eventos y <i>streetwear</i>. Su objetivo es generar conexiones, impulsar la innovación y crear experiencias únicas en una comunidad vibrante y en constante evolución.';
+        textoInfo.innerHTML = 'Friends & Family, fundada en CDMX por Lucho Martinez, es una productora y <i>media company</i> que fusiona gastronomía, cultura y creatividad. Actúa como un paraguas creativo para proyectos diversos, desde cocina innovadora hasta producción de eventos. Su objetivo es generar conexiones, impulsar la innovación y crear experiencias únicas en una comunidad vibrante y en constante evolución.';
 
         // Removemos las clases de movimiento para que, gracias a la transición en CSS, las fotos vuelvan al centro
         fotos.forEach(foto => {
