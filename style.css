@@ -1,0 +1,324 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    overflow: hidden; /* Evita que aparezca el scroll */
+    flex-direction: column;  /* Asegura que los elementos estén apilados verticalmente */
+    justify-content: space-between;  /* Distribuye los elementos de arriba a abajo */
+    font-family: "JetBrains Mono", serif; /* Aplicar la fuente */
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-rows: repeat(7, 1fr); /* Siete filas */
+    grid-gap: 8px; /* Espacio entre las imágenes */
+    position: relative;
+    height: 100vh; /* La galería ocupa el 100% de la altura */
+    width: 100vw;  /* La galería ocupa el 100% del ancho */
+    box-sizing: border-box;
+}
+
+
+
+.foto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-left: 0; /* Asegura que las fotos no tengan espacio extra a la izquierda */
+    transition: transform 2s ease;
+}
+.foto:nth-child(1) {
+    top: 0%; left: 0%; /* Foto 1 tocando el borde izquierdo */
+    width: 25vw; height: 25vh;
+}
+
+.foto:nth-child(2) {
+    top: 20%; left: 10%; /* Foto 2 con una posición aleatoria */
+    width: 30vw; height: 25vh;
+}
+
+.foto:nth-child(3) {
+    top: 15%; left: 0%; /* Foto 3 tocando el borde izquierdo */
+    width: 35vw; height: 30vh;
+    z-index: 3; /* Asegura que esté encima de otros elementos */
+
+}
+
+.foto:nth-child(4) {
+    top: 10%; left: 70%; /* Foto 4 con una posición aleatoria */
+    width: 25vw; height: 35vh;
+}
+
+.foto:nth-child(5) {
+    top: 0%; left: 20%; /* Foto 5 con una posición aleatoria */
+    width: 35vw; height: 40vh;
+}
+
+.foto:nth-child(6) {
+    top: 4%; left: 50%; /* Foto 6 tocando el borde izquierdo */
+    width: 30vw; height: 25vh;
+}
+
+.foto:nth-child(7) {
+    top: 25%; left: 30%; /* Foto 7 con una posición aleatoria */
+    width: 35vw; height: 30vh;
+}
+
+.foto:nth-child(8) {
+    top: 40%; left: 0%; /* Foto 8 con una posición aleatoria */
+    width: 20vw; height: 20vh;
+}
+
+.foto:nth-child(9) {
+    top: 60%; left: 10%; /* Foto 9 con una posición aleatoria */
+    width: 40vw; height: 35vh;
+}
+
+.foto:nth-child(10) {
+    top: 0%; left: 80%; /* Foto 10 con una posición aleatoria */
+    width: 30vw; height: 25vh;
+}
+
+.foto:nth-child(11) {
+    top: 40%; left: 50%; /* Foto 11 con una posición aleatoria */
+    width: 20vw; height: 25vh;
+     z-index: 3; /* Asegura que esté encima de otros elementos */
+}
+
+.foto:nth-child(12) {
+    top: 45%; left: 25%; /* Foto 12 con una posición aleatoria */
+    width: 10vw; height: 15vh;
+    z-index: -1; /* Este valor hace que el elemento quede debajo de los elementos con z-index más altos */
+
+}
+
+.foto:nth-child(13) {
+    top: 0%; left: 40%; /* Foto 13 con una posición aleatoria */
+    width: 25vw; height: 45vh;
+    z-index: 3; /* Este valor hace que el elemento quede debajo de los elementos con z-index más altos */
+
+}
+
+.foto:nth-child(14) {
+    top: 80%; left: -5%; /* Foto 14 con una posición aleatoria */
+    width: 30vw; height: 30vh;
+}
+
+.foto:nth-child(15) {
+    top: 50%; left: 75%; /* Foto 15 con una posición aleatoria */
+    width: 25vw; height: 25vh;
+    z-index: 3; /* Asegura que esté encima de otros elementos */
+}
+
+.foto:nth-child(16) {
+    top: 55%; left: -5%; /* Foto 16 con una posición aleatoria */
+    width: 20vw; height: 20vh;
+    z-index: -1; /* Asegura que esté encima de otros elementos */
+
+
+}
+
+.foto:nth-child(17) {
+    top: 55%; left: 65%; /* Foto 17 tocando el borde izquierdo */
+    width: 20vw; height: 20vh;
+    z-index: 3; /* Asegura que esté encima de otros elementos */
+}
+
+.foto:nth-child(18) {
+    top: 45%; left: 80%; /* Foto 18 con una posición aleatoria */
+    width: 30vw; height: 30vh;
+}
+
+.foto:nth-child(19) {
+    top: 70%; left: 65%; /* Foto 19 con una posición aleatoria */
+    width: 35vw; height: 25vh;
+    z-index: 3; /* Asegura que esté encima de otros elementos */
+
+}
+
+.foto:nth-child(20) {
+    top: 60%; left: 50%; /* Foto 20 con una posición aleatoria */
+    width: 30vw; height: 30vh;
+    z-index: 3; /* Asegura que esté encima de otros elementos */
+
+}
+
+.foto:nth-child(21) {
+    top: 30%; left: 55%; /* Foto 21 con una posición aleatoria */
+    width: 30vw; height: 25vh;
+}
+
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.foto.move-left {
+    transform: translateX(-100vw); /* Se mueve completamente a la izquierda */
+    transition: transform 2s ease;
+}
+
+.foto.move-right {
+    transform: translateX(100vw); /* Se mueve completamente a la derecha */
+    transition: transform 2s ease;
+}
+
+.foto.move-center {
+    transform: translateX(0); /* Regresa al centro */
+    transition: transform 2s ease;
+}
+
+
+
+/* Contenedor del logo y el texto */
+.logo-container {
+    position: fixed;
+    bottom: -150px; /* Da un pequeño espacio desde el borde inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column; /* El logo y el texto estarán uno encima del otro */
+    align-items: center;
+    transition: bottom 1s ease, transform 1s ease; /* Para el movimiento */
+    z-index: 3; /* Asegura que esté encima de otros elementos */
+}
+
+
+/* Logo */
+.logo {
+    width: auto;
+    cursor: pointer;
+    transition: transform 1s ease;
+}
+
+/* Texto oculto */
+.logo-text {
+    opacity: 0; /* Empieza oculto */
+    transform: translateY(20px); /* Empieza desplazado hacia abajo */
+    transition: opacity 1s ease, transform 1s ease; /* Animación para el texto */
+    margin-top: 15px; /* Espacio entre el logo y el texto */
+    text-align: center; /* Asegura que el texto esté centrado */
+    z-index: 2; /* Asegura que no sea cubierto por otros elementos */
+    font-size: 12px;
+}
+
+/* Efecto de mover el logo y mostrar el texto */
+.logo-container.moved {
+    bottom: 50%; /* Subir el logo */
+    transform: translate(-50%, 50%); /* Animación del logo */
+}
+
+.logo-container.moved .logo-text {
+    opacity: 1; /* Aparece el texto */
+    transform: translateY(0); /* El texto sube junto con el logo */
+}
+
+a {
+    color: black !important; /* Fuerza que el color sea negro */
+    text-decoration: none; /* Opcional: quita el subrayado */
+}
+
+a:hover {
+    color: black !important; /* Mantiene el color negro al pasar el mouse */
+    text-decoration: underline;
+}
+
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); } /* Sube 15px */
+}
+
+.logo.jump {
+    animation: jump 0.5s ease-in-out;
+}
+
+
+/* Media queries para ajustar tamaño */
+@media screen and (max-width: 900px) {
+    .logo {
+        width: 100vw;  /* El logo ocupará un 60% del ancho en pantallas medianas */
+        max-width: 280px; /* Tamaño máximo en pantallas medianas */
+    }
+
+    .foto {
+        width: 40vw;
+        height: 40vh;
+    }
+
+    .foto:nth-child(1) { width: 45vw; height: 50vh; }
+    .foto:nth-child(2) { width: 50vw; height: 45vh; }
+
+    @media screen and (max-width: 700px) {
+        .logo-container {
+            bottom: -180px; /* Da un pequeño espacio desde el borde inferior */
+        }
+        
+        .logo-text {
+        
+            font-size:10px;
+        }
+
+        .foto {
+            width: 10vw;
+            height: 10vh;
+        }
+    
+    
+        .foto {
+            width: 25vw;
+            height: 25vh;
+        }
+    
+        .foto:nth-child(1) { width: 25vw; height: 40vh; }
+        .foto:nth-child(2) { width: 35vw; height: 30vh; }
+        .foto:nth-child(3) { width: 20vw; height: 20vh; }
+        .foto:nth-child(4) { width: 25vw; height: 30vh; }
+        .foto:nth-child(5) { width: 20vw; height: 20vh; }
+        .foto:nth-child(6) { width: 30vw; height: 25vh; }
+        .foto:nth-child(7) { width: 30vw; height: 25vh; }
+        .foto:nth-child(8) { width: 20vw; height: 20vh; }
+        .foto:nth-child(9) { width: 25vw; height: 25vh; }
+        .foto:nth-child(10) { width: 25vw; height: 20vh; }
+        .foto:nth-child(11) { width: 20vw; height: 20vh; }
+        .foto:nth-child(12) { width: 20vw; height: 20vh; }
+        .foto:nth-child(13) { width: 30vw; height: 45vh; }
+        .foto:nth-child(14) { width: 20vw; height: 20vh; }
+        .foto:nth-child(15) { width: 20vw; height: 20vh; }
+        .foto:nth-child(16) { width: 20vw; height: 20vh; }
+        .foto:nth-child(17) { width: 25vw; height: 15vh; }
+        .foto:nth-child(18) { width: 20vw; height: 20vh; }
+        .foto:nth-child(19) { width: 25vw; height: 20vh; }
+        .foto:nth-child(20) { width: 30vw; height: 30vh; }
+        .foto:nth-child(21) { width: 20vw; height: 20vh; }
+    }
+    
+        
+    }
+  
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 100vw;  /* El logo ocupará un 50% del ancho en pantallas pequeñas */
+        max-width: 250px; /* Tamaño máximo en pantallas pequeñas */
+    }
+
+    .foto {
+        width: 50vw;
+        height: 50vh;
+    }
+    .logo-container {
+        bottom: -200px; /* Da un pequeño espacio desde el borde inferior */
+    }
+    
+    .logo-text {
+    
+        font-size:10px;
+    }
+
+    
+}
