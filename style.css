@@ -151,6 +151,8 @@ body, html {
 .foto:nth-child(21) {
     top: 30%; left: 55%; /* Foto 21 con una posición aleatoria */
     width: 30vw; height: 25vh;
+        z-index: 3; /* Asegura que esté encima de otros elementos */
+
 }
 
 
