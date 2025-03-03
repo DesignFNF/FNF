@@ -6,7 +6,7 @@ body, html {
     overflow: hidden; /* Evita que aparezca el scroll */
     flex-direction: column;  /* Asegura que los elementos estén apilados verticalmente */
     justify-content: space-between;  /* Distribuye los elementos de arriba a abajo */
-        font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', monospace;
     }
 
 
@@ -151,7 +151,7 @@ body, html {
 .foto:nth-child(21) {
     top: 30%; left: 55%; /* Foto 21 con una posición aleatoria */
     width: 30vw; height: 25vh;
-        z-index: 3; /* Asegura que esté encima de otros elementos */
+    z-index: 3; /* Asegura que esté encima de otros elementos */
 
 }
 
