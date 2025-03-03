@@ -248,8 +248,13 @@ a:hover {
 
      .logo {
         width: 150vw;  /* El logo ocupará un 50% del ancho en pantallas pequeñas */
-        max-width: 600px; /* Tamaño máximo en pantallas pequeñas */
+        max-width: 500px; /* Tamaño máximo en pantallas pequeñas */
     }
+.logo-text {
+
+    font-size: 15px;
+}
+    
 }
 
 /* Media queries para ajustar tamaño */
